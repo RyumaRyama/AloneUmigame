@@ -21,6 +21,7 @@
     {
       "js": [
         "src/api_key.js",
+        "src/getDataFromHtml.js",
         "src/main.js"
       ],
       "matches": [
