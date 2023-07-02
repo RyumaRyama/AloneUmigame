@@ -23,12 +23,31 @@ const SetUmigameWindowElement = (document) => {
 
 // 送信ボタンの実装
 const SetSubmit = (document, questionText, answerText) => {
-  submitTextElement = document.getElementById('answer-input-text');
-  submitButtonElement = document.getElementById('answer-input-button');
+  // input系
+  const submitTextElement = document.getElementById('answer-input-text');
+  const submitButtonElement = document.getElementById('answer-input-button');
+
+  // チャット欄
+  const chatContents = document.getElementById('chat-contents');
+
+  // onClick
   submitButtonElement.addEventListener('click', (e) => {
+    // チャット生成
+    const submitText = document.createElement('div');
+    submitText.className = 'text';
+    const submitContent = document.createElement('div');
+    submitContent.className = 'chat-user';
+    submitContent.appendChild(submitText);
+    const submitContainer = document.createElement('div');
+    submitContainer.className = 'chat-user-container';
+    submitContainer.appendChild(submitContent);
+    chatContents.prepend(submitContainer);
+
+    submitText.innerHTML = submitTextElement.value;
+
     PostChatGPT(submitTextElement.value, questionText, answerText, document);
+    submitTextElement.value = '';
   });
-  submitTextElement.value = '';
 }
 
 // 問題文の埋め込み

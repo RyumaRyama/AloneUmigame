@@ -31,12 +31,12 @@ const umigameWindowStyle = `
     width: 10%;
   }
 
-  .chat_user_container {
+  .chat-user-container {
     text-align: right;
     margin-bottom: 10px;
   }
 
-  .chat_gpt {
+  .chat-gpt {
     display: inline-block;
     border-radius: 10px;
     background-color: rgb(150, 250, 150);
@@ -45,7 +45,7 @@ const umigameWindowStyle = `
     margin-bottom: 10px;
   }
 
-  .chat_user {
+  .chat-user {
     display: inline-block;
     border-radius: 10px;
     background-color: rgb(250, 250, 250);
