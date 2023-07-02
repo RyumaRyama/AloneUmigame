@@ -9,12 +9,6 @@ const umigameWindowHtml = `
         </span>
       </button>
     </div>
-    <div id="chat-contents">
-      <div class="chat-gpt-container">
-        <div class="chat-gpt">
-          <div class="text">はい</div>
-        </div>
-      </div>
-    </div>
+    <div id="chat-contents"></div>
   </div>
 `;

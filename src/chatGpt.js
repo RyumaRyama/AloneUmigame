@@ -47,7 +47,23 @@ const PostChatGPT = (submitText, questionText, answerText, umigameDocument) => {
   // 返答があった場合のコールバック
   xhr.onreadystatechange = () => {
     if (xhr.readyState != 4) return;
-    console.log(xhr.response);
+    const responseText =  JSON.parse(xhr.response)['choices'][0]['message']['content']
+
+    // チャット欄
+    const chatContents = umigameDocument.getElementById('chat-contents');
+    
+    // チャット生成
+    const responseTextElement = document.createElement('div');
+    responseTextElement.className = 'text';
+    const responseContent = document.createElement('div');
+    responseContent.className = 'chat-gpt';
+    responseContent.appendChild(responseTextElement);
+    const responseContainer = document.createElement('div');
+    responseContainer.className = 'chat-gpt-container';
+    responseContainer.appendChild(responseContent);
+    chatContents.prepend(responseContainer);
+
+    responseTextElement.innerHTML = responseText;
   }
   xhr.open('POST', URL);
   xhr.setRequestHeader('Content-Type', 'application/json');
