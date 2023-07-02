@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "AloneUmigame",
+  "version": "1.0.0",
+
+  "action": {
+    "default_icons": {
+      "16": "images/icon16.png",
+      "24": "images/icon24.png",
+      "32": "images/icon32.png"
+    }
+  },
+  "description": "ひとりぼっちで遊ぶウミガメのスープ",
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "src/api_key.js",
+        "src/main.js"
+      ],
+      "matches": [
+        "https://ryumaryama.com/*"
+      ]
+    }
+  ]
+}
