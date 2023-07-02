@@ -1,1 +1,2 @@
 # AloneUmigame
+ChatGPTを活用した、ぼっちでもウミガメのスープを楽しむことができるChrome拡張です。
