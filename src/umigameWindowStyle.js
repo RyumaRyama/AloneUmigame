@@ -31,8 +31,27 @@ const umigameWindowStyle = `
     width: 10%;
   }
 
-  .chat_contents>.chat_user {
+  .chat_user_container {
+    text-align: right;
+    margin-bottom: 10px;
+  }
+
+  .chat_gpt {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: rgb(150, 250, 150);
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .chat_user {
+    display: inline-block;
     border-radius: 10px;
     background-color: rgb(250, 250, 250);
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
   }
 `;
