@@ -1,5 +1,6 @@
-const question_text = getQuestionText();
-const answer_text = getAnswerText();
+// サイトから問題情報を取得
+const question_text = GetQuestionText();
+const answer_text = GetAnswerText();
 
-console.log(question_text);
-console.log(answer_text);
+// ウミガメのスープで遊ぶためのウィンドウ表示
+OpenUmigameWindow();

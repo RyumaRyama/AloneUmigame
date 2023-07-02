@@ -22,6 +22,9 @@
       "js": [
         "src/api_key.js",
         "src/getDataFromHtml.js",
+        "src/umigameWindowHtml.js",
+        "src/umigameWindowStyle.js",
+        "src/umigameWindow.js",
         "src/main.js"
       ],
       "matches": [
