@@ -3,6 +3,7 @@ const OpenUmigameWindow = () => {
   const windowFeatures = 'width=500,height=600';
   const umigameWindow = window.open('', 'AloneUmigame', windowFeatures);
   SetUmigameWindowElement(umigameWindow.document);
+  return umigameWindow;
 };
 
 // ウィンドウに対してUIなどを整える
@@ -17,4 +18,10 @@ const SetUmigameWindowElement = (document) => {
 
   // HTML本体
   document.body.innerHTML = umigameWindowHtml;
+};
+
+// 問題文の埋め込み
+const SetQuestion = (umigameWindow, questionText) => {
+  element = umigameWindow.document.getElementById('question');
+  element.innerHTML = questionText;
 };

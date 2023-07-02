@@ -8,7 +8,7 @@ const umigameWindowStyle = `
     margin: 10px;
   }
 
-  .question {
+  #question {
     border-radius: 10px;
     background-color: rgb(100, 100, 100);
     color: rgb(240, 240, 240);
@@ -21,12 +21,12 @@ const umigameWindowStyle = `
     text-align: center;
     vertical-align: middle;
   }
-  .answer-input-text {
+  #answer-input-text {
     vertical-align: middle;
     width: 80%;
     height: 30px;
   }
-  .answer-input-button {
+  #answer-input-button {
     vertical-align: middle;
     width: 10%;
   }
