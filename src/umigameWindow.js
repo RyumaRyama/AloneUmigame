@@ -1,8 +1,9 @@
 // ウミガメのスープで遊ぶためのウィンドウを開く
-const OpenUmigameWindow = () => {
+const OpenUmigameWindow = (questionText, answerText) => {
   const windowFeatures = 'width=500,height=600';
   const umigameWindow = window.open('', 'AloneUmigame', windowFeatures);
   SetUmigameWindowElement(umigameWindow.document);
+  SetSubmit(umigameWindow.document, questionText, answerText);
   return umigameWindow;
 };
 
@@ -19,6 +20,16 @@ const SetUmigameWindowElement = (document) => {
   // HTML本体
   document.body.innerHTML = umigameWindowHtml;
 };
+
+// 送信ボタンの実装
+const SetSubmit = (document, questionText, answerText) => {
+  submitTextElement = document.getElementById('answer-input-text');
+  submitButtonElement = document.getElementById('answer-input-button');
+  submitButtonElement.addEventListener('click', (e) => {
+    PostChatGPT(submitTextElement.value, questionText, answerText, document);
+  });
+  submitTextElement.value = '';
+}
 
 // 問題文の埋め込み
 const SetQuestion = (umigameWindow, questionText) => {

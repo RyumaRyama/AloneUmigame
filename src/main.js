@@ -3,5 +3,5 @@ const questionText = GetQuestionText();
 const answerText = GetAnswerText();
 
 // ウミガメのスープで遊ぶためのウィンドウ表示
-const umigameWindow = OpenUmigameWindow();
+const umigameWindow = OpenUmigameWindow(questionText, answerText);
 SetQuestion(umigameWindow, questionText);
