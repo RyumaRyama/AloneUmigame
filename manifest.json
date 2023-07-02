@@ -20,7 +20,8 @@
   "content_scripts": [
     {
       "js": [
-        "src/api_key.js",
+        "src/chatGptApiKey.js",
+        "src/chatGpt.js",
         "src/getDataFromHtml.js",
         "src/umigameWindowHtml.js",
         "src/umigameWindowStyle.js",
